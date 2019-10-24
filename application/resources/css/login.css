@@ -1,0 +1,59 @@
+*{
+
+}
+
+#conteinerGeneral{
+ width: 900px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+form {
+  border: 6px solid #f1f1f1;
+  border-radius: 3%;
+}
+
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+ 
+}
+
+#submit {
+  background-color:rgb(36, 82, 209);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+}
+
+#submit:hover {
+  opacity: 0.8;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.logo {
+  width: 40%;
+  border-radius: 48%;
+}
+
+.container {
+  padding: 16px;
+}
+
+#container{
+  text-align: center;
+  margin: 24px 0 12px 0; 
+}

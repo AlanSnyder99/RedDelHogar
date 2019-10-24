@@ -1,0 +1,40 @@
+#ver{
+
+
+}
+
+.card{
+	background-color: hsla(120, 80%, 100%, 0.3);
+	width:280px;
+	border-radius: 15px;
+
+}
+
+p{
+	color: white;
+	margin: 0 auto;
+}
+
+#buscador{
+	margin: 0 auto;
+	align-items: center;
+    justify-content: space-around;
+    display: flex;
+    float: none;
+}
+
+#submit{
+	margin: 0 auto;
+	align-items: center;
+    justify-content: space-around;
+    display: flex;
+    float: none;
+}
+
+#inputs{
+	margin: 0 auto;
+	align-items: center;
+    justify-content: space-around;
+    display: flex;
+    float: none;
+}
