@@ -6,8 +6,9 @@ class Controller_Main extends Controller{
     
     function index(){
         $servicio = new Model_Servicios();
-        $novedades = $servicio->ultimasNovedades();
-        $this->view->generateSt('index.php',$novedades);
+        $novedades = $servicio->ultimasNovedadesIndex();
+        $novedadesSector = $servicio->ultimasNovedadesSectorIndex();        
+        $this->view->generateSt('index.php',$novedades, $novedadesSector);
     }
 
     function empresa(){
@@ -26,10 +27,47 @@ class Controller_Main extends Controller{
       	$web = $_POST['web'];
         $mensaje = $_POST['mensaje'];
 
-        $txt = "Nombre:".$nombre."<br>Email:".$email."<br>Web:".$web."<br>".$mensaje."";
+        if($nombre == null && $email == null && $web == null && $mensaje == null ) {
+                $this->view->generateSt('proveedores.php');
+        } else {
+            $txt = "<strong>Nombre: ".$nombre."</strong><br><strong>Email: ".$email."</strong><br><strong>Web: ".$web."</strong><br><br>".$mensaje."";
 
         $servicio->enviarEmail($titulo,$txt,$nombre);
+             echo'<script type="text/javascript">
+    alert("Consulta enviada con Exito!");
+    </script>';
         $this->view->generateSt('proveedores.php');
+        };
+
+        $this->view->generateSt('proveedores.php');
+    }
+
+       function emailSumateRed(){
+        $servicio = new Model_Servicios();
+        $titulo = "Contacto Sumate A La Red";
+        $nombre = $_POST['nombre'];
+        $nombreComercio = $_POST['nombreDelComercio'];
+        $cuit = $_POST['cuit'];
+        $direccion = $_POST['direccion'];
+        $localidad = $_POST['localidad'];
+        $email = $_POST['email'];
+        $telefono = $_POST['telefono'];
+        $asunto = $_POST['asunto'];
+        $mensaje = $_POST['mensaje'];
+
+        if($nombre == null && $nombreComercio == null && $cuit == null && $direccion == null && $localidad == null && $email == null && $mensaje == null && $telefono == null ) {
+                $this->view->generateSt('sumateALaRed.php');
+        } else {
+            $txt = "<strong>".$asunto."</strong><br><br><strong>Nombre: </strong> ".$nombre."<br><strong>Nombre del comercio: </strong> ".$nombreComercio."<br><strong>Cuit: </strong> ".$cuit."<br><strong>Direccion: </strong> ".$direccion."<br><strong>Localidad: </strong> ".$localidad."<br><strong>Email: </strong> ".$email."<br><strong>Telefono: </strong> ".$telefono."<br><br>".$mensaje."";
+
+        $servicio->enviarEmail($titulo,$txt,$nombre);
+             echo'<script type="text/javascript">
+    alert("Consulta enviada con Exito!");
+    </script>';
+        $this->view->generateSt('sumateALaRed.php');
+        };
+
+          $this->view->generateSt('sumateALaRed.php');
     }
 
     function enviarEmailContacto(){
@@ -39,8 +77,17 @@ class Controller_Main extends Controller{
         $email = $_POST['email'];
         $localidad = $_POST['localidad'];
         $mensaje = $_POST['mensaje'];
-        $txt = "<strong>Nombre:</strong> ".$nombre."<br><strong>Email:</strong> ".$email."<br><strong>Localidad:</strong> ".$localidad."<br><br>".$mensaje."";
+        
+        if($nombre == null && $email == null && $localidad == null && $mensaje == null ) {
+              header("location: /main/index");  
+        } else {
+            $txt = "<strong>Nombre: </strong> ".$nombre."<br><strong>Email: </strong> ".$email."<br><strong>Localidad: </strong> ".$localidad."<br><br>".$mensaje."";
+        
         $servicio->enviarEmail($titulo,$txt,$nombre);
+        
+        header("location: /main/index");  
+        };
+
         header("location: /main/index");  
     }
 
@@ -77,6 +124,12 @@ class Controller_Main extends Controller{
          $usuarios = $servicio->listaUsuarios();
         $this->view->generateSt('adminUsuarios.php',$usuarios);   
      }
+       function adminSucursales(){
+         $servicio = new Model_Servicios();
+         $sucursales = $servicio->listaSucursales();
+        $this->view->generateSt('adminSucursales.php',$sucursales);   
+     }
+     
 
      function adminNovedades(){
         $servicio = new Model_Servicios();
@@ -171,10 +224,31 @@ class Controller_Main extends Controller{
         $servicio = new Model_Servicios();
         $fecha = new DateTime();
         $diaActual = date('m/d/Y h:i:s a', time());
-        $novedades = $servicio->totalNovedades($diaActual);
+//      $novedades = $servicio->totalNovedades($diaActual);
+        $novedades = $servicio->ultimasNovedades();
         $fechasDeNovedades = $servicio->fechasDeNovedades();   
         $this->view->generateSt('novedades.php',$novedades,$fechasDeNovedades);
 
+    }
+
+     function eventos(){
+
+        $servicio = new Model_Servicios();
+        //$fecha = new DateTime();
+        //$diaActual = date('m/d/Y h:i:s a', time());
+//      $novedades = $servicio->totalNovedades($diaActual);
+        $eventos = $servicio->totalEventos();
+        //$fechasDeNovedades = $servicio->fechasDeNovedades();   
+        $this->view->generateSt('eventos.php',$eventos);
+
+    }
+
+     function verEvento(){
+        
+        $idEventos = $_GET['idEventos'];
+        $servicio = new Model_Servicios();
+        $evento = $servicio->eventoPorId($idEventos);
+        $this->view->generateSt('verEvento.php',$evento);
     }
 
       function verNovedad(){
@@ -183,6 +257,36 @@ class Controller_Main extends Controller{
         $servicio = new Model_Servicios();
         $novedad = $servicio->novedadPorId($idNovedad);
         $this->view->generateSt('verNovedad.php',$novedad);
+    }
+
+
+     function responsabilidadSocial(){
+
+        //$servicio = new Model_Servicios();
+        //$fecha = new DateTime();
+        //$diaActual = date('m/d/Y h:i:s a', time());
+//      $novedades = $servicio->totalNovedades($diaActual);
+        //$eventos = $servicio->totalEventos();
+        //$fechasDeNovedades = $servicio->fechasDeNovedades();   
+        $this->view->generateSt('responsabilidadSocial.php');
+
+    }
+
+    function verResponsabilidad(){
+        
+        $idResponsabilidades = $_GET['idResponsabilidades'];
+       
+         switch ($idResponsabilidades) {
+            case 1:
+                $this->view->generateSt('verResponsabilidad01.php');
+                break;
+            
+            case 2:
+                 $this->view->generateSt('verResponsabilidad02.php');
+                break;
+
+            };
+        //$this->view->generateSt('verResponsabilidad.php');
     }
 
     function novedadesPorFecha(){
@@ -199,6 +303,21 @@ class Controller_Main extends Controller{
         //$this->view->generateSt('verNovedad.php',$novedad);
     }
 
-      
+      function pdfView(){
+        $id = $_GET['id'];
+
+        switch ($id) {
+            case 1:
+                $pdf = "catalogoJulio.pdf";
+                break;
+            
+            case 2:
+                $pdf = "catalogoDiciembre.pdf";
+                break;
+
+            }
+
+            $this->view->generateSt('pdfView.php',$pdf);
+      }
     
 }

@@ -35,7 +35,7 @@
   <body>
   <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/main/index">Red Del Hogar</a>
+        <a class="navbar-brand" href="/main/index"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -63,9 +63,7 @@
         <li>
           <a class="nav-link" href="/main/novedades">Novedades</a>
         </li>
-         <li>
-          <a class="nav-link" href="/main/beneficioAnses">Beneficio ANSES</a>
-        </li>
+
         <li>
           <a class="nav-link" href="/main/#contact">Contacto</a>
         </li>
@@ -86,21 +84,104 @@
   <div class="abc-center" style="  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;">
-<div id="carouselExampleControls" class="carousel slide " style="width:50%" data-ride="carousel">
+  min-height: 600vh;">
+<div id="carouselExampleControls" class="carousel slide " style="width:0%" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="../application/resources/img/revista_del_sector1.jpg" alt="First slide">
+      <img class="d-block w-100" src="../application/resources/upload/img01.jpg" >
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../application/resources/img/revista_del_sector2.jpg" alt="Second slide">
+      <img class="d-block w-100" src="../application/resources/upload/img02.jpg" >
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../application/resources/img/revista_del_sector3.jpg" alt="Third slide">
+      <img class="d-block w-100" src="../application/resources/upload/img03.jpg" >
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../application/resources/img/revista_del_sector4.jpg" alt="Third slide">
+      <img class="d-block w-100" src="../application/resources/upload/img04.jpg" >
     </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img05.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img06.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img07.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img08.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img09.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img10.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img11.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img12.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img13.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img14.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img15.jpg">
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img16.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img17.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img18.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img19.jpg">
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img20.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img21.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img22.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img23.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img24.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img25.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img26.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img27.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img28.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img29.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img30.jpg" >
+    </div>
+     <div class="carousel-item active">
+      <img class="d-block w-100" src="../application/resources/upload/img31.jpg" >
+    </div>
+
+
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -118,7 +199,7 @@
 
 
 
-<br><br><br>
+<br> <div class="container" ><iframe width="200" height="500" src="https://www.youtube.com/embed/etSpW7rVSZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div><br><br>
 
  
 
@@ -157,6 +238,9 @@ info@reddelhogar.com.ar
 </p>
 <a href="#">
             <img class="dataFiscal" src="../application/resources/img/dataFiscal.jpg" alt="logo">
+ </a>
+  <a href="">
+            <img style="height: 15%; width: 15%;" class="dataFiscal" src="../application/resources/img/logo_faca.png" alt="logo">
  </a>
       </div>
     </div>

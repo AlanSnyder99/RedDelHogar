@@ -32,8 +32,16 @@ class Model_Usuario extends Model{
     public function validarlogin($nombreUsuario, $clave)
     {
         $db=BaseDeDatos::conectarBD();
- 
-        $sql= 'SELECT Roles.tipo as rol, idUsuarios as id 
+
+        //$Sqlhash = 'SELECT * FROM Usuarios where usuario = "'.$nombreUsuario.'"';
+       
+       // $result2 = mysqli_query($db, $Sqlhash);
+       // $hash =mysqli_fetch_assoc($result2);
+
+
+          // if (password_verify($clave, $hash['contrasena'])) {
+    
+     $sql= 'SELECT Roles.tipo as rol, idUsuarios as id 
                 FROM Usuarios
                 INNER JOIN Roles on Usuarios.rol = Roles.idRoles
                 WHERE Usuarios.usuario = "'.$nombreUsuario.'" AND Usuarios.contrasena = "'.$clave.'"';
@@ -52,7 +60,12 @@ class Model_Usuario extends Model{
             header("location:/login?e=1");
 
         }
-    }
+//} else {
+ //header("location:/login?e=1");
+}
+
+       
+    //}
 
     public function buscarIdUsuario($nombreUsuario){
 
@@ -92,12 +105,12 @@ class Model_Usuario extends Model{
         }
     }
 
-     public function guardarUsuario($clave,$nombre,$razon,$domicilio,$cp,$email,$telefono,$nombreUsuario,$idRoles,$idProvincias,$idIntegrantes,$idLocalidad){
+     public function guardarUsuario($clave,$nombre,$razon,$domicilio,$cp,$email,$telefono,$nombreUsuario,$idRoles,$idIntegrantes){
 
     $db=BaseDeDatos::conectarBD();
 
-    $sql='INSERT INTO Usuarios (idIntegrantes,nombre,razon,domicilio,cp,email,usuario,contrasena,rol,telefono,idLocalidades,idProvincias) 
-VALUES ('.$idIntegrantes.',"'.$nombre.'","'.$razon.'","'.$domicilio.'","'.$cp.'","'.$email.'","'.$nombreUsuario.'","'.$clave.'",'.$idRoles.','.$telefono.','.$idLocalidad.','.$idProvincias.')';
+    $sql='INSERT INTO Usuarios (idIntegrantes,nombre,razon,domicilio,cp,email,usuario,contrasena,rol,telefono) 
+VALUES ('.$idIntegrantes.',"'.$nombre.'","'.$razon.'","'.$domicilio.'","'.$cp.'","'.$email.'","'.$nombreUsuario.'","'.$clave.'",'.$idRoles.','.$telefono.')';
     
     
     $result=mysqli_query($db, $sql);

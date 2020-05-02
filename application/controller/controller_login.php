@@ -13,7 +13,8 @@ class Controller_Login extends Controller
 
         $usuario = new Model_Usuario();
         $nombreUsuario = $_POST['nombreUsuario'];
-        $clave =  $_POST['clave']; //ENCRIPTAR CLAVE md5($_POST['clave'])
+        $clave =  $_POST['clave']; 
+       // $clave = password_hash($clavePrimera, PASSWORD_DEFAULT );
 		$rol =  $usuario->validarlogin($nombreUsuario,$clave);
 		
 		$_SESSION['rol'] = $rol;

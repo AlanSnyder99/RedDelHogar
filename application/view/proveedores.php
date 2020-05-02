@@ -35,7 +35,7 @@
   <body>
   <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/main/index">Red Del Hogar</a>
+        <a class="navbar-brand" href="/main/index"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -63,9 +63,7 @@
         <li>
           <a class="nav-link" href="/main/novedades">Novedades</a>
         </li>
-         <li>
-          <a class="nav-link" href="/main/beneficioAnses">Beneficio ANSES</a>
-        </li>
+
         <li>
           <a class="nav-link" href="/main/#contact">Contacto</a>
         </li>
@@ -80,17 +78,400 @@
                 <h3>PROVEEDORES</h3>
                 <br>
                  <img class="bannerEmpresa" style="width:70%" src="../application/resources/img/PROVEEDORES-BANNER.png" />
-                  <p>
+                  <p class="text-justify">
                    En Red del Hogar nos comprometemos con nuestros asociados ofreciendo los mejores proveedores del sector y las principales referencias.
 
 Le presentamos un listado de proveedores que nos privilegian con su apoyo. Marcas de primera línea que están en contacto permanente con nuestra Red, brindando asesoramiento y soporte para nuestros asociados.
 
                   </p>
-<img class="rounded mx-auto d-block" style="width:80%" src="../application/resources/img/TODAS_LAS_MARCAS_3.jpg" />
+
+
+<div class="container">
+    <div class="galleryItem">
+        <a href="https://www.alcatelmobile.com/ar/
+" target="_blank"><img src="../application/resources/upload/ALCATEL.png" alt=""></a>
+    </div>
+
+    <div class="galleryItem">
+        <a href="https://www.atma.com.ar/
+" target="_blank"><img src="../application/resources/upload/ATMA.png" alt=""></a>
+    </div>
+      <div class="galleryItem">
+        <a href="http://aurora.com.ar/
+" target="_blank"><img src="../application/resources/upload/AURORA.png" alt=""></a>
+      
+    </div>
+
+    <div class="galleryItem">
+        <a href="http://www.aspensalud.com.ar/
+" target="_blank"><img src="../application/resources/upload/ASPEN.jpg" alt=""></a>
+    
+    </div>
+ 
+
+    <div class="galleryItem">
+        <a href="https://bellissima.com/ar/
+" target="_blank"><img src="../application/resources/upload/BELLISSIMA.jpg" alt=""></a>
+     
+    </div>
+      <div class="galleryItem">
+        <a href="https://bgh.com.ar/
+" target="_blank"><img src="../application/resources/upload/BGH.jpg" alt=""></a>
+       
+    </div>
+
+    <div class="galleryItem">
+        <a href="http://biemme.com.ar/
+" target="_blank"><img src="../application/resources/upload/BIEMME.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://colorliving.grupocolor.com.ar/
+" target="_blank"><img src="../application/resources/upload/COLORLIVING.jpg" alt=""></a>
+      
+    </div>
+
+    <div class="galleryItem">
+        <a href="https://www.columbiaelectrodomesticos.com.ar/
+" target="_blank"><img src="../application/resources/upload/COLUMBIA.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.dakot.com.ar/
+" target="_blank"><img src="../application/resources/upload/DAKOT.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://descansarsa.com.ar/
+" target="_blank"><img src="../application/resources/upload/DESCANSAR.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://drean.com.ar/
+" target="_blank"><img src="../application/resources/upload/DREAN.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.durafort.com.ar/muebles/
+" target="_blank"><img src="../application/resources/upload/DURAFORT.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.ecotermo.com/
+" target="_blank"><img src="../application/resources/upload/ECOTERMO.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.eiffelsrl.com.ar/
+" target="_blank"><img src="../application/resources/upload/EIFFEL.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.tienda.electrolux.com.ar/
+" target="_blank"><img src="../application/resources/upload/ELECTROLUX.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://epson.com.ar/
+" target="_blank"><img src="../application/resources/upload/EPSON.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://escorial.com.ar/
+" target="_blank"><img src="../application/resources/upload/ESCORIAL.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.eskabe.com.ar/
+" target="_blank"><img src="../application/resources/upload/ESKABE.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://exo.com.ar/
+" target="_blank"> <img src="../application/resources/upload/EXO.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://singerflorencia.com.ar/
+" target="_blank"><img src="../application/resources/upload/FLORENCIA.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.futuraonline.com.ar/
+" target="_blank"><img src="../application/resources/upload/FUTURA.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.tienda.gafa.com.ar/
+" target="_blank"><img src="../application/resources/upload/GAFA.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://gammaherramientas.com.ar/
+" target="_blank"><img src="../application/resources/upload/GAMMA.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.godeco.com.ar/
+" target="_blank"><img src="../application/resources/upload/GODECO.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.bicicletashalley.com.ar/
+" target="_blank"><img src="../application/resources/upload/HALLEY.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.hisense.com.ar/
+" target="_blank"><img src="../application/resources/upload/HISENSE.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://hitachi.radiovictoria.com.ar/
+" target="_blank"><img src="../application/resources/upload/HITACHI.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://support.hp.com/ar-es
+" target="_blank"><img src="../application/resources/upload/HP.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.jeico.com.ar/
+" target="_blank"><img src="../application/resources/upload/JEICO.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.kanjitech.com/
+" target="_blank"><img src="../application/resources/upload/KANJI.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.kohinoor.com.ar/
+" target="_blank"><img src="../application/resources/upload/KOHINNOR.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.lenovo.com/ar/es/
+" target="_blank"><img src="../application/resources/upload/LENOVO.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.lg.com/ar
+" target="_blank"><img src="../application/resources/upload/LG.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.liliana.com.ar/
+" target="_blank"><img src="../application/resources/upload/LILIANA.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.longvie.com/" target="_blank"><img src="../application/resources/upload/LONGVIE.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://tienda.patrick.com.ar/es_AR/producto
+" target="_blank"><img src="../application/resources/upload/MABE.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://www.morelli.com.ar/
+" target="_blank"><img src="../application/resources/upload/MORELLI.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://www.motorola.com.ar/
+" target="_blank"><img src="../application/resources/upload/MOTOROLA.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="http://www.soportesnakan.com.ar/
+" target="_blank"><img src="../application/resources/upload/NAKAN.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://www.noblex.com.ar/" target="_blank"><img src="../application/resources/upload/NOBLEX.jpg" alt=""></a>
+      
+    </div>
+         <div class="galleryItem">
+        <a href="https://www.orbis.com.ar/
+" target="_blank"><img src="../application/resources/upload/orbis.png" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="http://mueblesorlandi.com.ar/
+" target="_blank"><img src="../application/resources/upload/ORLANDI.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.osterargentina.com/
+" target="_blank"><img src="../application/resources/upload/oster.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://www.panasonic.com/es/
+" target="_blank"><img src="../application/resources/upload/PANASONIC.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://tienda.patrick.com.ar/es_AR/producto
+" target="_blank"><img src="../application/resources/upload/PATRICK.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://www.patriot.com.ar/
+" target="_blank"><img src="../application/resources/upload/PATRIOT.png" alt=""></a>
+      
+    </div>
+
+       <div class="galleryItem">
+        <a href="https://www.pcboxargentina.com.ar/
+" target="_blank"><img src="../application/resources/upload/PCBOX.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="http://www.peabody.com.ar/
+" target="_blank"><img src="../application/resources/upload/PEABODY.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://petri.com.ar/
+" target="_blank"><img src="../application/resources/upload/PETRI.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.philco.com.ar/
+" target="_blank"><img src="../application/resources/upload/PHILCO.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.philips.com.ar/
+" target="_blank"><img src="../application/resources/upload/PHILIPS.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.piero.com.ar/
+" target="_blank"><img src="../application/resources/upload/PIERO.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://rainbowbebe.com.ar/
+" target="_blank"><img src="../application/resources/upload/RAINBOW.png" alt=""></a>
+      
+    </div>
+   
+      <div class="galleryItem">
+        <a href="http://www.rheem.com.ar/
+" target="_blank"><img src="../application/resources/upload/RHEEM.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://ricchezze.com.ar/
+" target="_blank"><img src="../application/resources/upload/RICCHEZZE.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.samsung.com/ar/
+" target="_blank"><img src="../application/resources/upload/SAMSUNG.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="https://www.sanup.com.ar/
+" target="_blank"><img src="../application/resources/upload/SANUP.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.senorial.com.ar/
+" target="_blank"><img src="../application/resources/upload/SEÑORIAL.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://sidal.grupocolor.com.ar/
+" target="_blank"><img src="../application/resources/upload/SIDAL.png" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://singerflorencia.com.ar/
+" target="_blank"><img src="../application/resources/upload/SINGER.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.smartlife.com.ar/
+" target="_blank"><img src="../application/resources/upload/smartlife.jpg" alt=""></a>
+      
+    </div>
+      <div class="galleryItem">
+        <a href="http://www.soldeverano.com.ar/
+" target="_blank"><img src="../application/resources/upload/SOLDEVERANO.png" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://www.sony.com.ar/
+" target="_blank"><img src="../application/resources/upload/SONY.png" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="http://www.starkweb.com.ar/
+" target="_blank"><img src="../application/resources/upload/STARK.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://www.suavegom.com.ar/
+" target="_blank"><img src="../application/resources/upload/SUAVEGOM.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://tas-eme.com.ar/
+" target="_blank"><img src="../application/resources/upload/TASEME.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://tcl.com.ar/
+" target="_blank"><img src="../application/resources/upload/TCL.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="http://www.usmansrl.com/
+" target="_blank"><img src="../application/resources/upload/USMAN.jpg" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="https://www.voss2000.com/
+" target="_blank"><img src="../application/resources/upload/VOSS2000.jpg" alt=""></a>
+      
+    </div>
+     <div class="galleryItem">
+        <a href="http://www.whirlpool.com.ar/
+" target="_blank"><img src="../application/resources/upload/WHIRLPOOL.png" alt=""></a>
+      
+    </div>
+     <div class="galleryItem">
+        <a href="https://zteargentina.com.ar/
+" target="_blank"><img src="../application/resources/upload/ZTE.png" alt=""></a>
+      
+    </div>
+       <div class="galleryItem">
+        <a href="http://www.randers.com.ar/
+" target="_blank"><img src="../application/resources/upload/RANDERS.jpg" alt=""></a>
+      
+    </div>
+         <div class="galleryItem">
+        <a href="http://www.bebesit.com.ar/
+" target="_blank"><img src="../application/resources/upload/BEBESIT.png" alt=""></a>
+       
+    </div>
+
+</div>
+
+
+        
+
+<!--<img class="rounded mx-auto d-block" style="width:80%" src="../application/resources/img/TODAS_LAS_MARCAS_3.jpg" />-->
 <br>
 <h4>ÚNETE COMO PROVEEDOR
 </h4>
- <p>
+ <p class="text-justify">
                   Si eres proveedor y quieres saber cómo trabajamos o solicitar información, rellena el siguiente formulario y nos pondremos en contacto contigo con la mayor brevedad posible.
                   </p>
                   
@@ -160,6 +541,9 @@ info@reddelhogar.com.ar
 </p>
 <a href="#">
             <img class="dataFiscal" src="../application/resources/img/dataFiscal.jpg" alt="logo">
+ </a>
+  <a href="http://www.facahogar.com.ar">
+            <img  class="faca" src="../application/resources/img/logo_faca.png" alt="logo">
  </a>
       </div>
     </div>

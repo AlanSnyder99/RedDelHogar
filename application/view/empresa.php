@@ -35,7 +35,7 @@
   <body>
   <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/main/index">Red Del Hogar</a>
+       <a class="navbar-brand" href="/main/index"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -63,9 +63,7 @@
         <li>
           <a class="nav-link" href="/main/novedades">Novedades</a>
         </li>
-         <li>
-          <a class="nav-link" href="/main/beneficioAnses">Beneficio ANSES</a>
-        </li>
+
         <li>
           <a class="nav-link" href="/main/#contact">Contacto</a>
         </li>
@@ -76,21 +74,21 @@
 <br><br>
 
 <div id="features">
-     <div class="text-center features-caption features">
+     <div   class="text-center features-caption features">
                 <h3>¿QUIÉNES SOMOS?</h3>
-                  <p>
+                  <p style="text-align: justify ">
                    Somos una central de compras y servicios con más de 15 años de trayectoria y experiencia en el mercado de artículos para el hogar. Día tras día, buscamos posicionarnos en el sector permitiendo que todos nuestros integrantes trabajen de forma independiente pero siempre apuntando hacia un mismo objetivo: adaptarse a los cambios y mantenerse activos.
 
 Todas nuestras acciones están destinadas al crecimiento, al aumento de la competitividad de cada uno de nuestros asociados y a la satisfacción de los clientes.
                   </p>
-                   <img class="bannerEmpresa" style="width:70%" src="../application/resources/img/EMPRESA.png" />
+                   <img  class="bannerEmpresa" style="width:70%" src="../application/resources/img/EMPRESA.png" />
      </div>
 <br><br>
  <div class="text-center features-caption features">          
 
   <h3>Nuestras principales acciones son:</h3>
   <br>
-<h5>
+<h5 >
 -Desarrollo de acuerdos comerciales con las principales marcas del mercado.
 </h5>
 <h5>
@@ -116,20 +114,22 @@ Todas nuestras acciones están destinadas al crecimiento, al aumento de la compe
                 <h4>Nuestra forma de trabajo es lo que nos hace diferentes</h4>
                 <br>
 
-<div class="container">
+<div class="features">
  
-  <div class="row align-items-start">
+  <div class="text-center features-caption features">
  
-    <div class="col">
-      <h5 class="text-uppercase">Misión</h5>
-      <p class="text-center">Buscamos nuevas formas de optimizar y aumentar la rentabilidad de nuestros asociados, siendo flexibles y adaptándonos a los cambios del entorno. Logrando la mejor integración y participación dentro de un mercado cada vez más competitivo y exigente.</p>
-    </div>
  
-    <div class="col">
-      <h5 class="text-uppercase">Visión</h5>
-      <p class="text-center">Estudiamos el negocio retail y la forma de generar beneficios a todos nuestros asociados aportando soluciones ganar-ganar con agentes de referencia del mercado.
+   <h5>Misión</h5>
+      <p style="text-align: justify ">
+      Buscamos nuevas formas de optimizar y aumentar la rentabilidad de nuestros asociados, siendo flexibles y adaptándonos a los cambios del entorno. Logrando la mejor integración y participación dentro de un mercado cada vez más competitivo y exigente.</p>
+  
+
+    <h5>Visión</h5>
+    <p style="text-align: justify "> Estudiamos el negocio retail y la forma de generar beneficios a todos nuestros asociados aportando soluciones ganar-ganar con agentes de referencia del mercado.
 Buscamos liderar en este ambito, apoyados en nuestra experiencia, métodos de análisis y capacitación permanente, que nos permitirán transitar el futuro brindando servicios para el óptimo desarrollo de nuestros comerciantes.</p>
-    </div>
+<!--      <p style="text-align: justify "><a style="color: blue">Visión:</a> <br><br> Estudiamos el negocio retail y la forma de generar beneficios a todos nuestros asociados aportando soluciones ganar-ganar con agentes de referencia del mercado.
+Buscamos liderar en este ambito, apoyados en nuestra experiencia, métodos de análisis y capacitación permanente, que nos permitirán transitar el futuro brindando servicios para el óptimo desarrollo de nuestros comerciantes.</p>-->
+  
  
  
   </div>
@@ -199,6 +199,9 @@ info@reddelhogar.com.ar
 </p>
 <a href="#">
             <img class="dataFiscal" src="../application/resources/img/dataFiscal.jpg" alt="logo">
+ </a>
+ <a href="http://www.facahogar.com.ar">
+            <img  class="faca" src="../application/resources/img/logo_faca.png" alt="logo">
  </a>
       </div>
     </div>

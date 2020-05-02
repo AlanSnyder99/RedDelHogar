@@ -52,7 +52,7 @@ $result4 = $servicio->integrantes();
 
 <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/login/adminHome">Red Del Hogar</a>
+        <a class="navbar-brand" href="#"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -158,7 +158,7 @@ $result4 = $servicio->integrantes();
             </div>
       
 
-            <div class="form-group">
+            <!--<div class="form-group">
               <h5 for="comment">Provincia:</h5>
                <select class="form-control" name="provincia" required>
                   <option>---</option>
@@ -184,7 +184,7 @@ $result4 = $servicio->integrantes();
     ?>
                 </select>
                     <small id="emailnotification" class="form-text text-muted">Necesario</small>
-            </div>
+            </div>-->
 
               <div class="form-group">
               <h5 for="comment">Integrante:</h5>

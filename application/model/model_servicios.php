@@ -14,14 +14,14 @@ class Model_Servicios extends Model{
  	 public function enviarEmail($titulo,$txt,$nombre)
     {
     
-        $emailSalida = "alan.boca12@gmail.com";
+        $emailSalida = "marketing@reddelhogar.com.ar";
         $mensaje = $txt;
         $titulo = $titulo;
         $nombre = $nombre;
                 
         /*Configuracion de variables para enviar el correo*/
-        $mail_username="restocomidas@gmail.com";//Correo electronico saliente ejemplo: tucorreo@gmail.com
-        $mail_userpassword="unlam2018";//Tu contraseña de gmail
+        $mail_username="contactoemailsnyder@gmail.com";//Correo electronico saliente ejemplo: tucorreo@gmail.com
+        $mail_userpassword="nayijvhzpuenedpb";//Tu contraseña de gmail
         $mail_addAddress=$emailSalida;//correo electronico que recibira el mensaje
         //$template="application/view/email_template.html"; // $template="email_template.html";//Ruta de la plantilla HTML para enviar nuestro mensaje
                 
@@ -93,7 +93,7 @@ class Model_Servicios extends Model{
 
         $db=BaseDeDatos::conectarBD();
 
-        $sql= 'SELECT s.descripcion as descripcion, s.latitude as latitude, s.longitude as longitude, i.nombre, s.domicilio as domicilio, s.telefono as telefono FROM Sucursales as s
+        $sql= 'SELECT s.descripcion as descripcion, s.latitude as latitude, s.longitude as longitude, i.nombre, s.domicilio as domicilio, s.telefono as telefono, s.idSucursales as id FROM Sucursales as s
         
         INNER JOIN Integrantes as i on s.idIntegrantes = i.idIntegrantes 
 
@@ -108,20 +108,57 @@ class Model_Servicios extends Model{
 
         $db=BaseDeDatos::conectarBD();
 
-
         
-        $sql= 'SELECT  * FROM Novedades ORDER BY idNovedades DESC LIMIT 3';
+        $sql= 'SELECT  * FROM Novedades ORDER BY idNovedades DESC';
 
         $result=mysqli_query($db, $sql);
 
         return $result;
     }
 
+
+
+     public function   ultimasNovedadesIndex(){
+
+        $db=BaseDeDatos::conectarBD();
+
+        
+        $sql= 'SELECT  * FROM Novedades WHERE delSector = false ORDER BY idNovedades DESC LIMIT 2';
+
+        $result=mysqli_query($db, $sql);
+
+        return $result;
+    }
+
+    public function ultimasNovedadesSectorIndex(){
+
+        $db=BaseDeDatos::conectarBD();
+        
+        $sql= 'SELECT  * FROM Novedades WHERE delSector = true ORDER BY idNovedades DESC LIMIT 2';
+
+        $result=mysqli_query($db, $sql);
+
+        return $result;
+    }
+
+  
+
     public function novedadPorId($idNovedad){
 
         $db=BaseDeDatos::conectarBD();
 
         $sql= 'SELECT  * FROM Novedades WHERE idNovedades= '.$idNovedad.' ';
+
+        $result=mysqli_query($db, $sql);
+
+        return $result;
+    }
+
+    public function eventoPorId($idEventos){
+
+        $db=BaseDeDatos::conectarBD();
+
+        $sql= 'SELECT  * FROM Eventos WHERE idEventos= '.$idEventos.' ';
 
         $result=mysqli_query($db, $sql);
 
@@ -143,6 +180,18 @@ class Model_Servicios extends Model{
         return $result;
 
      }
+
+      public function totalEventos(){
+
+        $db=BaseDeDatos::conectarBD();
+
+        $sql= 'SELECT  * FROM Eventos ORDER BY DAY(fechaCalendario) desc ';
+
+        $result=mysqli_query($db, $sql);
+
+        return $result;
+
+    }
 
      public function todasNovedades(){
 
@@ -304,6 +353,20 @@ class Model_Servicios extends Model{
         return $result;
     }
 
+    public function nombreZona($idZona){
+         $db=BaseDeDatos::conectarBD();
+
+         $sql= "SELECT zona FROM Zonas where idZonas= ".$idZona.";";
+
+         $result=mysqli_query($db, $sql);
+
+         $rows=mysqli_fetch_assoc($result);
+
+         $nombre = ($rows['zona']);
+
+        return $nombre;
+    }
+
     public function tablaSucursalesPor($localidad,$zona,$provincia){
 
         $db=BaseDeDatos::conectarBD();
@@ -458,6 +521,40 @@ class Model_Servicios extends Model{
 
          return $result;
 
+      }
+
+      public function guardarSucursal($descripcion,$domicilio,$telefono,$horario,$latitud,$longitud,$idProvincias,$idLocalidad,$idIntegrantes,$idZonas){
+
+        $db=BaseDeDatos::conectarBD();
+
+        $sql= "INSERT INTO Sucursales (idIntegrantes,idLocalidades,idZonas,idProvincias,domicilio,descripcion,telefono,longitude,latitude, horario) VALUES
+        (".$idIntegrantes.",".$idLocalidad.",".$idZonas.",".$idProvincias.",'".$domicilio."','".$descripcion."',".$telefono.",'".$longitud."','".$latitud."','".$horario."')";
+
+
+        $result=mysqli_query($db, $sql);
+
+        return $result;
+
+      }
+
+      public function sucursalEspecifica($idSucursal){
+
+        $db=BaseDeDatos::conectarBD();
+
+        //$sql = "SELECT * FROM Sucursales where idSucursales = ".$idSucursal."";
+
+        $sql= "SELECT s.descripcion as descripcion, s.latitude as latitude, s.longitude as longitude, i.nombre as nombre, s.domicilio as domicilio, l.localidad as localidad, p.provincia as provincia, s.telefono as telefono, s.horario as horario
+                FROM Sucursales as s
+                INNER JOIN Integrantes as i on s.idIntegrantes = i.idIntegrantes
+                INNER JOIN Localidades as l on s.idLocalidades = l.idLocalidades
+                INNER JOIN Provincias as p on s.idProvincias = p.idProvincias
+                INNER JOIN Zonas as z on s.idZonas = z.idZonas
+                WHERE  s.idSucursales = ".$idSucursal."
+                ";
+
+         $result=mysqli_query($db, $sql);
+
+        return $result;
       }
   
     }

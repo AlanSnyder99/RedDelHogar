@@ -35,7 +35,7 @@
   <body>
   <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/main/index">Red Del Hogar</a>
+       <a class="navbar-brand" href="/main/index"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -62,9 +62,6 @@
         </li>
         <li>
           <a class="nav-link" href="/main/novedades">Novedades</a>
-        </li>
-         <li>
-          <a class="nav-link" href="/main/beneficioAnses">Beneficio ANSES</a>
         </li>
         <li>
           <a class="nav-link" href="/main/#contact">Contacto</a>
@@ -157,6 +154,9 @@ info@reddelhogar.com.ar
 </p>
 <a href="#">
             <img class="dataFiscal" src="../application/resources/img/dataFiscal.jpg" alt="logo">
+ </a>
+  <a href="http://www.facahogar.com.ar">
+            <img  class="faca" src="../application/resources/img/logo_faca.png" alt="logo">
  </a>
       </div>
     </div>

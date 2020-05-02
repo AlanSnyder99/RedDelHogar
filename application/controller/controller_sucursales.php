@@ -19,6 +19,14 @@ class Controller_Sucursales extends Controller
         $this->view->generateSt('indexSucursalesPorZona.php',$idZona);
     }
 
+     function sucursalEspecifica(){
+		
+		$idSucursal = $_GET['idSucursal'];
+		$idZona = $_GET['idZona'];
+		$servicio = new Model_Servicios();
+		$sucursalEspecifica = $servicio->sucursalEspecifica($idSucursal);
+        $this->view->generateSt('indexSucursalEspecifica.php',$idSucursal,$idZona);
+    }
 
  }
  ?>

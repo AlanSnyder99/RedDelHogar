@@ -5,6 +5,8 @@ $servicio = new Model_Servicios();
 
 $idZona = $data;
 
+$nombreZona = $servicio->nombreZona($idZona);
+
 $result = $servicio->listaSucursalesPorZona($idZona);
 
 $result2 = $servicio->listaSucursalesPorZona($idZona);
@@ -49,7 +51,7 @@ $result3 = $servicio->listaSucursalesPorZona($idZona);
   <body>
   <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/main/index">Red Del Hogar</a>
+       <a class="navbar-brand" href="/main/index"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -77,9 +79,7 @@ $result3 = $servicio->listaSucursalesPorZona($idZona);
         <li>
           <a class="nav-link" href="/main/novedades">Novedades</a>
         </li>
-         <li>
-          <a class="nav-link" href="/main/beneficioAnses">Beneficio ANSES</a>
-        </li>
+  
         <li>
           <a class="nav-link" href="/main/#contact">Contacto</a>
         </li>
@@ -91,8 +91,33 @@ $result3 = $servicio->listaSucursalesPorZona($idZona);
 
 
   <!--================ Map section ===================-->
-  <div id="showcase">
-   <div id="map"></div>
+  <div id="mapaDiv" class="container">
+    <h3>Sucursales <?php echo $nombreZona?></h3>
+    <div class="row"> 
+      <div class="col-8">
+      
+      <div  id="map"></div>
+</div>
+<div id="sucursales" class="col-4">
+
+
+     <?php
+                
+                if(mysqli_num_rows($result3) >= 1){
+                    while($sucursales = mysqli_fetch_assoc($result3)){
+                        echo "<a href='../sucursales/sucursalEspecifica?idSucursal=".$sucursales['id']."&idZona=".$idZona."'><ul  class='list-group list-group-flush'>
+  <li class='list-group-item'><strong>".$sucursales['descripcion']."<br>Domicilio:</strong> ".$sucursales['domicilio']."<br> <strong>Telefono:</strong> ".$sucursales['telefono']."  </li>
+</ul>-------------------------------------------------</a>";
+                    }
+                }
+                
+?>
+    </div>
+</div>
+<br>
+<a style="margin-top: 2px" href="/sucursales/index"> <h5 ><img style="height: 25px; width: 25px;" src="../application/resources/img/flecha.png"> Volver a Sucursales por Zonas</h5></a>
+</div>
+  
    
     <script>
       
@@ -154,7 +179,7 @@ $result3 = $servicio->listaSucursalesPorZona($idZona);
       }
    google.maps.event.addDomListener(window, 'load', initMap);
     </script>
-   </div>
+   
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdROo0mPZr7wsA7bE9_E4c0Q8Wuh1LHf0&callback=initMap"
     async defer></script>
@@ -179,8 +204,17 @@ $result3 = $servicio->listaSucursalesPorZona($idZona);
 <br><br><br><br>
 
 <div class="container">
-<div class="float-sm-left "><h2>Telefono</h2><p>4483-4005/ 06/ 07</p><p>Lunes a Viernes de 09:00 a 18:00 hs</p></div>
-<div class="float-sm-right"><h2>Sede</h2><p>Paunero 715, Morón Pcia. Bs. As.</p></div>
+  <div class="row justify-content-md-center">
+<div class="col">
+</div>
+<div class="col text-center">
+<h2>Telefono</h2><p>4483-4005/ 06/ 07</p><p>Lunes a Viernes de 09:00 a 18:00 hs</p></div>
+
+<div class="col text-center">
+<h2 >Sede</h2><p>Paunero 715, Morón Pcia. Bs. As.</p></div>
+<div class="col">
+</div>
+</div>
 </div>
 
   <footer class="text-center pos-re">
@@ -198,6 +232,9 @@ info@reddelhogar.com.ar
 </p>
 <a href="#">
             <img class="dataFiscal" src="../application/resources/img/dataFiscal.jpg" alt="logo">
+ </a>
+ <a href="http://www.facahogar.com.ar">
+            <img  class="faca" src="../application/resources/img/logo_faca.png" alt="logo">
  </a>
       </div>
     </div>

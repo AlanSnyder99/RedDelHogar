@@ -57,7 +57,7 @@ domicilio varchar(30),
 cp varchar(50),
 email varchar(50),
 usuario varchar(15),
-contrasena varchar(20),
+contrasena varchar(800),
 rol int NOT NULL,
 telefono int,
 idLocalidades int,
@@ -88,6 +88,7 @@ descripcion varchar(100) COLLATE utf8_unicode_ci,
 telefono varchar(50),
 latitude varchar(20) COLLATE utf8_unicode_ci NOT NULL,
 longitude varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+horario varchar(80),
 primary key (idSucursales),
 foreign key (idLocalidades) references localidades (idLocalidades),
 foreign key (idIntegrantes) references integrantes (idIntegrantes),
@@ -106,8 +107,24 @@ fecha varchar(40),
 fechaCalendario datetime,
 idTema int,
 bannerImg varchar(100),
+delSector boolean,
 primary key (idNovedades),
 foreign key (idTema) references temas (idTemas)
+);
+
+CREATE TABLE Eventos
+(
+idEventos int NOT NULL AUTO_INCREMENT,
+titulo varchar(40),
+subtitulo varchar(40),
+descripcion varchar(100),
+desarrollo varchar(32765),
+fecha varchar(40),
+fechaCalendario datetime,
+bannerImg varchar(100),
+galeria varchar(1000),
+video varchar(1000),
+primary key (idEventos)
 );
 
 CREATE TABLE SliderPrincipal
@@ -214,8 +231,8 @@ INSERT INTO Integrantes (nombre,domicilio,cp,idLocalidades,idProvincias,telefono
 ('RED DEL HOGAR','Paunero 715. Esquina Berra.','- 1708 -',1,1,44834005,'30-70534513-5',26-07-2019);
 
 
-INSERT INTO Sucursales (idIntegrantes,idLocalidades,idZonas,idProvincias,domicilio,descripcion,telefono,longitude,latitude) VALUES
-/*(1,1,5,1,'Corrientes 2963','','1','-58.40814374981473','-34.60483487624681'),*/
+INSERT INTO Sucursales (idIntegrantes,idLocalidades,idZonas,idProvincias,domicilio,descripcion,telefono,longitude,latitude,horario) VALUES
+/*(1,1,5,1,'Corrientes 2963','','1','-58.40814374981473','-34.60483487624681'),*/ /*AGREGAR HORARIOS*/
 (1,1,3,1,'Paunero 715','SEDE ','1','-58.62795378500959','-34.63465676664228'),
 (1,1,3,1,'Aguero 748','Sucursal 2 ','46963365','-58.6195308','-34.6650272'),
 (1,2,1,1,'1° de Mayo 1065','Casa Central','47692123','-58.6099974','-34.5613387'),
@@ -264,9 +281,16 @@ INSERT INTO Sucursales (idIntegrantes,idLocalidades,idZonas,idProvincias,domicil
 (1,26,2,1,'Eva Perón 3371','Sucursal 1','4246 7480','-58.36484568500665','-34.72155957124934');
 
 
-INSERT INTO Novedades (titulo,subtitulo,descripcion,desarrollo,fecha,fechaCalendario,idTema,bannerImg) VALUES 
-('Prueba9','Pr4e3a2','Prueba2','PAFMIQMQFQMF',
-'Mayo 03, 2019','2019-07-04', 1,'portada_tapitas_2');
+INSERT INTO Novedades (titulo,subtitulo,descripcion,desarrollo,fecha,fechaCalendario,idTema,bannerImg,delSector) VALUES 
+('Noti','PrSsfs4e3a2','Pruebasfsfsa','PAFasfasfasfasfMIQMQFQMF',
+'Mayo 03, 2019','2019-07-04', 1,'ganadores',false);
+
+INSERT INTO Eventos (titulo,subtitulo,descripcion,desarrollo,fecha,fechaCalendario,bannerImg) VALUES 
+('Red del Hogar realizó su tradicional evento de fin de año','Se realizó en Pilar y contó con la presencia de importantes marcas del sector retail.','Se realizó en Pilar y contó con la presencia de importantes marcas del sector retail.','Finalizado diciembre, Red del Hogar realizó su evento anual de fin de año. En esta oportunidad la reunión se llevó a cabo en el Hotel Sheraton de Pilar.
+Contaron con la asistencia de más de 90 personas, entre los que se encontraban asociados y proveedores de las principales marcas como Philips, Exo, Pcbox, Alladio, Macoser, Newsan.
+El evento se aprovechó para hacer un repaso y evaluación del año 2016. La cena se extendió hasta la madrugada y sirvió para afianzar aún más la relación entre los asociados.
+',
+'Mayo 03, 2019','2019-07-04','ganadores');
 
 
 

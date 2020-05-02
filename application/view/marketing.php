@@ -35,7 +35,7 @@
   <body>
   <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/main/index">Red Del Hogar</a>
+       <a class="navbar-brand" href="/main/index"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -63,9 +63,7 @@
         <li>
           <a class="nav-link" href="/main/novedades">Novedades</a>
         </li>
-         <li>
-          <a class="nav-link" href="/main/beneficioAnses">Beneficio ANSES</a>
-        </li>
+
         <li>
           <a class="nav-link" href="/main/#contact">Contacto</a>
         </li>
@@ -80,7 +78,7 @@
                 <h3>GESTIÓN DE MARKETING</h3>
                 <br>
                  <img class="bannerEmpresa" style="width:70%" src="../application/resources/img/marketing.png" />
-                  <p>
+                  <p class="text-justify">
                   Empleamos las técnicas de Marketing que mejor se adaptan a cada uno de nuestros asociados con el fin de dar a conocer sus productos y servicios, así como también posicionar sus comercios.
                   </p>
                   
@@ -94,7 +92,7 @@
   <p>Realizadas específicamente para un comercio por solicitud del integrante.</p>
   <br><br>
   <h4>Acciones agrupadas</h4>
-  <p>Realizadas periódicamente por la Red, son proyectos en los que participan comercios que deciden voluntariamente tomar parte en la acción. De esta forma se aprovechan al máximo las economías de escala del grupo, consiguiendo precios extraordinariamente competitivos, sin perder la personalización con la marca propia de cada comercio.
+  <p class="text-justify">Realizadas periódicamente por la Red, son proyectos en los que participan comercios que deciden voluntariamente tomar parte en la acción. De esta forma se aprovechan al máximo las economías de escala del grupo, consiguiendo precios extraordinariamente competitivos, sin perder la personalización con la marca propia de cada comercio.
 
 Dentro de estas acciones están las campañas de catálogos mensuales de venta, productos de merchandising, publicidad gráfica en las revistas de mayor tirada nacional, publicidad radial, televisiva, etc.
 
@@ -170,9 +168,9 @@ Todos los años Red del Hogar lanza campañas de acciones de marketing.
 
 <div class="row align-items-start" style="margin-left: 5%; margin-right: 5%;">
  
-    <div class="col">
+    <!--<div class="col">
       <div class='image' style="cursor: pointer;" onclick="window.location='/main/accionesEnPuntosDeVenta';">
-                      <img src='../application/resources/img/acciones_en_puntos_de_venta.jpg' alt='sample74'/>
+                      <img src='../application/resources/img/acciones_en_puntos_de_venta3.jpg' alt='sample74'/>
                     </div> 
     </div>
  
@@ -193,7 +191,37 @@ Todos los años Red del Hogar lanza campañas de acciones de marketing.
                       <img src='../application/resources/img/revistas_del_sector.jpg' alt='sample74'/>
                     </div>  
     </div>
+-->
+     <div class="col">
+      <div class='image' style="cursor: pointer;" onclick="window.location='/main/revistasDelSector';">
+                      <img src='../application/resources/img/medios.jpg' />
+                    </div>  
+    </div>
  
+    <div class="col">
+      <div class='image' style="cursor: pointer;" onclick="window.location='/main/responsabilidadSocial';">
+                      <img src='../application/resources/img/responsabilidadSocial.jpg' alt='sample74'/>
+                    </div>  
+    </div>
+
+     <div class="col">
+      <div class='image' style="cursor: pointer;" onclick="window.location='/main/eventos';">
+                      <img src='../application/resources/img/eventos.jpg' />
+                    </div>  
+    </div>
+
+    <div class="col">
+      <div class='image' style="cursor: pointer;" onclick="window.location='/main/revistasDelSector';">
+                      <img src='../application/resources/img/marcaPropia.jpg' />
+                    </div>  
+    </div>
+    
+     <div class="col">
+      <div class='image' style="cursor: pointer;" onclick="window.location='/main/revistasDelSector';">
+                      <img src='../application/resources/img/videoDeProductos.jpg'/>
+                    </div>  
+    </div>
+
   </div>
 
 
@@ -212,6 +240,9 @@ info@reddelhogar.com.ar
 </p>
 <a href="#">
             <img class="dataFiscal" src="../application/resources/img/dataFiscal.jpg" alt="logo">
+ </a>
+ <a href="http://www.facahogar.com.ar">
+            <img  class="faca" src="../application/resources/img/logo_faca.png" alt="logo">
  </a>
       </div>
     </div>

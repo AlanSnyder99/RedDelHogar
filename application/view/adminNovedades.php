@@ -56,7 +56,7 @@ $result1 = $servicio->temas();
 
 <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/login/adminHome">Red Del Hogar</a>
+        <a class="navbar-brand" href="#"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -66,7 +66,7 @@ $result1 = $servicio->temas();
         <?php
                         if($rol=='administradorTotal'){
                     echo "<li>";
-                    echo "<a class='nav-link' href='/sucursales/adminSucursales'>Sucursales</a>";
+                    echo "<a class='nav-link' href='/main/adminSucursales'>Sucursales</a>";
                     echo "</li>";    
                     }
         ?>

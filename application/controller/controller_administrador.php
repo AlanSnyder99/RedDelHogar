@@ -13,6 +13,14 @@ class Controller_Administrador extends Controller
         
     }
 
+     public function indexPost()
+    {
+      
+      $idUsuario = $_POST['idUsuario'];
+        $this->view->generateSt('adminHome.php',$idUsuario);
+        
+    }
+
     public function verUsuarios()
     {
     	$usuario = new Model_Usuario();
@@ -267,12 +275,14 @@ public function grabarModificacionCliente(){
              alert("La clave debe ser mayor a 4 digitos");
              </script>';
         }else{
+        
+ 
 
-        $clave = $contrasena/*md5($contrasena)*/;
+        $clave = password_hash($contrasena, PASSWORD_DEFAULT );
 
-        echo $clave;
+       
 
-        $usuario->guardarUsuario($clave,$nombre,$razon,$domicilio,$cp,$email,$telefono,$nombreUsuario,$idRoles,$idProvincias,$idIntegrantes,$idLocalidad);
+        $usuario->guardarUsuario($clave,$nombre,$razon,$domicilio,$cp,$email,$telefono,$nombreUsuario,$idRoles,$idIntegrantes);
 
         $servicio = new Model_Servicios();
          $usuarios = $servicio->listaUsuarios();
@@ -346,4 +356,32 @@ public function grabarModificacionCliente(){
         $this->view->generateSt('listaServiciosBuscados.php',$idUsuario,$servicios); 
     }
     
+    public function guardarSucursal(){
+        $servicio = new Model_Servicios();
+         
+         $sucursales = $servicio->listaSucursales();
+        
+        $descripcion = $_POST['descripcion'];
+        $domicilio = $_POST['domicilio'];
+        $horario = $_POST['horario'];
+        $telefono = $_POST['telefono'];
+        $latitud = $_POST['latitud'];
+        $longitud = $_POST['longitud'];
+
+    
+        $provincia = $_POST['provincia'];
+        $idProvincias = preg_replace("/[^0-9]{1,4}/", '', $provincia);
+        $localidad = $_POST['localidad'];
+        $idLocalidad = preg_replace("/[^0-9]{1,4}/", '', $localidad); //EXTRAE EL NUMERO DEL STRING DE ROL
+        $integrante = $_POST['integrante'];
+        $idIntegrantes = preg_replace("/[^0-9]{1,4}/", '', $integrante);
+        $zona = $_POST['zona'];
+        $idZonas = preg_replace("/[^0-9]{1,4}/", '', $zona); //EXTRAE EL NUMERO DEL STRING DE INTEGRANTES
+
+
+        $servicio->guardarSucursal($descripcion,$domicilio,$telefono,$horario,$latitud,$longitud,$idProvincias,$idLocalidad,$idIntegrantes,$idZonas);
+
+       $this->view->generateSt('adminSucursales.php',$sucursales);   
+
+    }
 }

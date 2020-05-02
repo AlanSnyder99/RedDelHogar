@@ -317,3 +317,31 @@ p.dummy-text:nth-child(3) {
 	}
 
 }
+
+#sucursales{
+	 height: 400px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+a {
+     color: #454545; /* Tu color en Hexa o RGB */
+     text-decoration: none;
+}
+
+a:hover {
+    color: #414141;
+    text-decoration: none;
+}
+
+#mapaDiv{
+	margin-top: 10%;
+
+}
+
+@media all and (max-width: 1200px) {
+    #mapaDiv {
+      margin-top: 20%;
+    }
+}

@@ -31,7 +31,7 @@
   <body>
   <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/main/index">Red Del Hogar</a>
+    <a class="navbar-brand" href="/main/index"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -58,9 +58,7 @@
         <li>
           <a class="nav-link" href="/main/novedades">Novedades</a>
         </li>
-         <li>
-          <a class="nav-link" href="/main/beneficioAnses">Beneficio ANSES</a>
-        </li>
+       
         <li>
           <a class="nav-link" href="/main/#contact">Contacto</a>
         </li>
@@ -70,30 +68,26 @@
 
   <!--================ Showcase section ===================-->
   <div id="showcase">
-    
-              
+ 
 <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
   <div class="carousel-inner">
-   
     <div class="carousel-item active">
-      <img class="d-block w-100 mx-auto d-block" id="imgCarro" src="../application/resources/img/banner_2_texto2.jpg" alt="First slide">
-    </div>
-   
-
-
-
-    <div class="carousel-item">
-      <img class="d-block w-100" id="imgCarro" src="../application/resources/img/banner_3_texto2.jpg" alt="Second slide">
+      <img class="d-block w-100" src="../application/resources/img/banner_1.jpg" alt="First slide">
+      
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" id="imgCarro" src="../application/resources/img/banner_4_texto2.jpg" alt="Third slide">
+      <img class="d-block w-100" src="../application/resources/img/banner_2.jpg" alt="Second slide">
+      
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" id="imgCarro" src="../application/resources/img/banner_texto2.jpg" alt="Third slide">
+      <img class="d-block w-100" src="../application/resources/img/banner_3.jpg" alt="Third slide">
+      
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" id="imgCarro" src="../application/resources/img/banner_texto_4_2.jpg" alt="Third slide">
+      <img class="d-block w-100" src="../application/resources/img/banner_4.jpg" alt="Third slide">
+  
     </div>
+  
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -103,9 +97,8 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>  
+</div> 
 
-      
   </div>
 
 
@@ -132,7 +125,7 @@
                     </div>
               </div>
               <div class="col-sm bottom-space">
-                    <div class="feature-box" style="cursor: pointer;" onclick="window.location='/main/beneficioAnses';">
+                    <div class="feature-box" style="cursor: pointer;" onclick="window.location='/sucursales/index';">
                         <i class="fa fa-address-card fa-5x fa-icon-image"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">
                           Nuestros Asociados
@@ -205,6 +198,21 @@
                 }
                 
 ?>
+<div class='col-sm'>
+                <div class='blog-item-box'>
+                <figure class='blog-item'>
+                    <div class='image'>
+                      <img src='../application/resources/upload/nota1AGeneral.jpg' />
+
+                      <i class='fa fa-clock-o' aria-hidden='true'></i>
+                    <figcaption>
+                      <h3>Ganadores del sorteo de fin de año</h3>
+                      <p>A continuación les facilitamos los datos de los ganadores del sorteo de Fin de Año.</p>
+                      <a href='/main/verNovedad?idNovedad=10' class='read-more'>Ver</a>
+                    </figcaption>
+                  </figure>
+                </div>
+            </div>
           </div>
         </div>
   </div>
@@ -217,37 +225,31 @@
             <div class="col-8">
             	<br><h4 class="noticiasdelsector">Noticias del sector</h4>
 
-            	<div class='col-sm'>
+ <?php
+ if(mysqli_num_rows($data2) >= 1){
+   while($novedadesSector = mysqli_fetch_assoc($data2)){
+ 
+ echo "   <div class='col-sm'>
                 <div class='blog-item-box'>
                 <figure class='blog-item'>
                     <div class='image'>
-                      <img src='../application/resources/img/ganadores.jpg' alt='sample74'/>
+                      <img src='../application/resources/upload/".$novedadesSector['bannerImg']."' alt='sample74'/>
 
                       <i class='fa fa-clock-o' aria-hidden='true'></i>
                     <figcaption>
-                      <h3>Ganadores</h3>
-                      <p>Estos son los ganadores del concurso</p>
-                      <a href='/main/verNovedad?idNovedad=".$novedades['idNovedades']."' class='read-more'>Ver</a>
+                      <h3>".$novedadesSector['titulo']."</h3>
+                      <p>".$novedadesSector['descripcion']."</p>
+                      <a href='/main/verNovedad?idNovedad=".$novedadesSector['idNovedades']."' class='read-more'>Ver</a>
                     </figcaption>
                   </figure>
                 </div>
-            </div>
+            </div> ";
+            }
+  }
 
-            <div class='col-sm'>
-                <div class='blog-item-box'>
-                <figure class='blog-item'>
-                    <div class='image'>
-                      <img src='../application/resources/img/ganadores.jpg' alt='sample74'/>
+ ?>
 
-                      <i class='fa fa-clock-o' aria-hidden='true'></i>
-                    <figcaption>
-                      <h3>Ganadores</h3>
-                      <p>Estos son los ganadores del concurso</p>
-                      <a href='/main/verNovedad?idNovedad=".$novedades['idNovedades']."' class='read-more'>Ver</a>
-                    </figcaption>
-                  </figure>
-                </div>
-            </div>
+           
 
 
             </div>
@@ -256,7 +258,7 @@
             	<br><h4>Catalogo mensual</h4>
             	<div>
 
-            		<a href="#"><img class="catalogo_div" src='../application/resources/img/catalogos.jpg' href /></a>
+            		<a href="/main/catalogos"><img class="catalogo_div" src='../application/resources/img/catalogos.jpg' href /></a>
             		
             	</div>
 
@@ -271,7 +273,7 @@
 <br>
 <div id="features2">
    <div class="text-center ">
-    <h1>Nuestros Porveedores</h1>
+    <h1>Nuestros Proveedores</h1>
     <h5>Conoce a nuestros <strong>proveedores</strong></h5>
   </div>
 </div>
@@ -283,23 +285,39 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="../application/resources/img/slide1.png" alt="First slide">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas1A.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../application/resources/img/slide2.png" alt="Second slide">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas1B.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../application/resources/img/slide3.png" alt="Third slide">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas2A.jpg" alt="Third slide">
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas2B.jpg" alt="Third slide">
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas3A.jpg" alt="Third slide">
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas3B.jpg" alt="Third slide">
+    </div>
+     </div>
+     <div class="carousel-item">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas4A.jpg" alt="Third slide">
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas4B.jpg" alt="Third slide">
+    </div>
+     </div>
+     <div class="carousel-item">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas5A.jpg" alt="Third slide">
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100" src="../application/resources/img/slidermarcas5B.jpg" alt="Third slide">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+
 </div>
 
  <div id="contact" class="contact">
@@ -386,18 +404,22 @@
   <footer class="text-center pos-re">
     <div class="container">
       <div class="footer__box">
-        <br>  <br>
+        <br>  <br><br>
         <p>&copy;  2016 Red del Hogar</p>
 <p>Paunero 715, Morón.
 
 Pcia. Buenos Aires.
 
 4483-4005/ 06/ 07
-
+</p>
+<p>
 info@reddelhogar.com.ar
 </p>
-<a href="#">
+<a href="">
             <img class="dataFiscal" src="../application/resources/img/dataFiscal.jpg" alt="logo">
+ </a>
+ <a href="http://www.facahogar.com.ar">
+            <img  class="faca" src="../application/resources/img/logo_faca.png" alt="logo">
  </a>
       </div>
     </div>

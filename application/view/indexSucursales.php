@@ -44,9 +44,26 @@ $result2 = $servicio->listaSucursales();
 
   </head>
   <body>
+<div class="navSucursales">
+  	   <nav style="margin-top: 3.8%;" id="navSucursales" class="navbar navbar-expand-sm fixed-top bg-light justify-content-center">
+
+    <div id="textZonas" class="headerZonas" >
+      <ul  class="navbar-nav ml-auto">
+          <?php
+          if(mysqli_num_rows($data) >= 1){
+                    while($zonas = mysqli_fetch_assoc($data)){
+                        echo " <li><a style='color: black' href='../sucursales/sucursalesZona?idZona=".$zonas['id']."' class='nav-link'><h5>".$zonas['zona']." <span class='badge badge-primary badge-pill' >".$zonas['CantSucursales']."</span></h5></a> </li>";
+                    }
+                }
+          ?>
+      
+      </ul>
+    </div>
+  </nav>
+  </div>
   <nav class="navbar navbar-expand-lg fixed-top activate-menu navbar-light bg-light">
     <!--<a class="navbar-brand mu-logo" href="index.html"><img class="logo" href="index.html" src="imgs/logo2.png" alt="logo"></a>-->
-    <a class="navbar-brand" href="/main/index">Red Del Hogar</a>
+       <a class="navbar-brand" href="/main/index"><img style="height: 30px; width: 200px;" src="../application/resources/img/RDHPNG.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -74,15 +91,24 @@ $result2 = $servicio->listaSucursales();
         <li>
           <a class="nav-link" href="/main/novedades">Novedades</a>
         </li>
-         <li>
-          <a class="nav-link" href="/main/beneficioAnses">Beneficio ANSES</a>
-        </li>
+
         <li>
           <a class="nav-link" href="/main/#contact">Contacto</a>
         </li>
       </ul>
     </div>
   </nav>
+    
+ 
+
+  <?php
+               /* if(mysqli_num_rows($data) >= 1){
+                    while($zonas = mysqli_fetch_assoc($data)){
+                        echo "<div class='list-group'> <a href='../sucursales/sucursalesZona?idZona=".$zonas['id']."' class='list-group-item list-group-item-action'>".$zonas['zona']." <span class='badge badge-primary badge-pill'>".$zonas['CantSucursales']."</span></a> </div>";
+                    }
+                }*/
+                
+?>
 
 
   <!--================ Map section ===================-->
@@ -117,7 +143,7 @@ $result2 = $servicio->listaSucursales();
             while($row = $result2->fetch_assoc()){ ?>
                 ['<div class="info_content">' +
                 '<h3><?php echo $row['nombre']; ?></h3>' +
-                '<p><?php echo $row['domicilio']; ?></p><p><?php echo $row['telefono']; ?></p>' + '</div>'],
+                '<p><?php echo $row['domicilio']; ?></p><p></p>' + '</div>'],
         <?php }
         }
         ?>
@@ -166,16 +192,6 @@ $result2 = $servicio->listaSucursales();
                 
 ?>
 
-
-
-
-</div>
-
-<br><br><br><br>
-
-<div class="container">
-<div class="float-sm-left "><h2>Telefono</h2><p>4483-4005/ 06/ 07</p><p>Lunes a Viernes de 09:00 a 18:00 hs</p></div>
-<div class="float-sm-right"><h2>Sede</h2><p>Paunero 715, Morón Pcia. Bs. As.</p></div>
 </div>
 
   <footer class="text-center pos-re">
@@ -193,6 +209,9 @@ info@reddelhogar.com.ar
 </p>
 <a href="#">
             <img class="dataFiscal" src="../application/resources/img/dataFiscal.jpg" alt="logo">
+ </a>
+ <a href="http://www.facahogar.com.ar">
+            <img  class="faca" src="../application/resources/img/logo_faca.png" alt="logo">
  </a>
       </div>
     </div>

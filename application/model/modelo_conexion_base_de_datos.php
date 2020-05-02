@@ -2,7 +2,8 @@
 
 	class BaseDeDatos extends Model{
 		static function  conectarBD(){
-			$server="localhost";
+			
+		$server="localhost";
 			$usuario="root";
 			$clave="";
 			$baseDeDatos="reddelhogardb";
@@ -21,7 +22,13 @@
 		
 	}
 
-	/*$server="gm.itecno.com.ar";
+	/*
+	$server="gm.itecno.com.ar";
 			$usuario="alansnyder";
 			$clave="q1w2e3r4";
+			$baseDeDatos="reddelhogardb";
+
+			$server="localhost";
+			$usuario="root";
+			$clave="";
 			$baseDeDatos="reddelhogardb";*/
